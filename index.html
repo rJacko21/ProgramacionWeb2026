@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Web - Sagas Gaming</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Portfolio Gaming</div>
+            
+            <!-- Botón para menú móvil -->
+            <div class="burger-menu" id="burgerMenu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+
+            <!-- Menú de navegación -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#sagas" class="nav-link dropdown-toggle">Sagas <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#resident-evil">Resident Evil</a></li>
+                        <li><a href="#zelda">The Legend of Zelda</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+
+            <!-- Botón de tema oscuro/claro -->
+            <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Sección de Inicio -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenido a Mi Portfolio Web</h1>
+            <p>Explora las sagas más icónicas de los videojuegos a través de una experiencia interactiva responsiva</p>
+            <button class="cta-button" onclick="document.getElementById('resident-evil').scrollIntoView({behavior: 'smooth'})">Explorar Sagas</button>
+        </div>
+    </section>
+
+    <!-- Sección Resident Evil -->
+    <section id="resident-evil" class="saga-section">
+        <div class="container">
+            <h2 class="section-title">Resident Evil</h2>
+            
+            <div class="saga-content">
+                <div class="saga-intro">
+                    <h3>Introducción a la Saga</h3>
+                    <p>Resident Evil es una de las sagas de videojuegos de terror más influyentes y exitosas de todos los tiempos. Desarrollada por Capcom, ha revolucionado el género de survival horror desde su lanzamiento inicial en 1998. La serie se caracteriza por su combinación única de acción, exploración y suspenso, ofreciendo una experiencia inmersiva que ha cautivado a millones de jugadores a nivel mundial.</p>
+                </div>
+
+                <div class="consoles-grid">
+                    <div class="console-card">
+                        <div class="carousel-container">
+                            <div class="carousel">
+                                <img src="https://via.placeholder.com/400x250/8B0000/FFFFFF?text=Resident+Evil+PS1+1" alt="Resident Evil PS1" class="carousel-image">
+                                <img src="https://via.placeholder.com/400x250/8B0000/FFFFFF?text=Resident+Evil+PS1+2" alt="Resident Evil PS1" class="carousel-image">
+                                <img src="https://via.placeholder.com/400x250/8B0000/FFFFFF?text=Resident+Evil+PS1+3" alt="Resident Evil PS1" class="carousel-image">
+                            </div>
+                            <button class="carousel-btn prev" onclick="changeSlide(this, -1)">❮</button>
+                            <button class="carousel-btn next" onclick="changeSlide(this, 1)">❯</button>
+                            <div class="carousel-dots">
+                                <span class="dot active" onclick="currentSlide(this, 0)"></span>
+                                <span class="dot" onclick="currentSlide(this, 1)"></span>
+                                <span class="dot" onclick="currentSlide(this, 2)"></span>
+                            </div>
+                        </div>
+                        <h4>PlayStation 1</h4>
+                        <p><strong>Año:</strong> 1998</p>
+                        <p>La consola icónica de Sony marcó el debut de la serie con "Resident Evil" original, que revolucionó los videojuegos con su perspectiva de cámara fija y atmósfera terrorífica. Introdujo conceptos clave del género que perduraría por décadas.</p>
+                    </div>
+
+                    <div class="console-card">
+                        <div class="carousel-container">
+                            <div class="carousel">
+                                <img src="https://via.placeholder.com/400x250/8B0000/FFFFFF?text=RE+GameCube+1" alt="Resident Evil GameCube" class="carousel-image">
+                                <img src="https://via.placeholder.com/400x250/8B0000/FFFFFF?text=RE+GameCube+2" alt="Resident Evil GameCube" class="carousel-image">
+                                <img src="https://via.placeholder.com/400x250/8B0000/FFFFFF?text=RE+GameCube+3" alt="Resident Evil GameCube" class="carousel-image">
+                            </div>
+                            <button class="carousel-btn prev" onclick="changeSlide(this, -1)">❮</button>
+                            <button class="carousel-btn next" onclick="changeSlide(this, 1)">❯</button>
+                            <div class="carousel-dots">
+                                <span class="dot active" onclick="currentSlide(this, 0)"></span>
+                                <span class="dot" onclick="currentSlide(this, 1)"></span>
+                                <span class="dot" onclick="currentSlide(this, 2)"></span>
+                            </div>
+                        </div>
+                        <h4>Nintendo GameCube</h4>
+                        <p><strong>Año:</strong> 2002</p>
+                        <p>"Resident Evil" (remake) exclusivo de GameCube ofreció gráficos mejorados y gameplay renovado. Esta versión se considera una de las mejores del franchise, mostrando el potencial de la consola de Nintendo.</p>
+                    </div>
+
+                    <div class="console-card">
+                        <div class="carousel-container">
+                            <div class="carousel">
+                                <img src="https://via.placeholder.com/400x250/8B0000/FFFFFF?text=RE+Xbox+360+1" alt="Resident Evil Xbox 360" class="carousel-image">
+                                <img src="https://via.placeholder.com/400x250/8B0000/FFFFFF?text=RE+Xbox+360+2" alt="Resident Evil Xbox 360" class="carousel-image">
+                                <img src="https://via.placeholder.com/400x250/8B0000/FFFFFF?text=RE+Xbox+360+3" alt="Resident Evil Xbox 360" class="carousel-image">
+                            </div>
+                            <button class="carousel-btn prev" onclick="changeSlide(this, -1)">❮</button>
+                            <button class="carousel-btn next" onclick="changeSlide(this, 1)">❯</button>
+                            <div class="carousel-dots">
+                                <span class="dot active" onclick="currentSlide(this, 0)"></span>
+                                <span class="dot" onclick="currentSlide(this, 1)"></span>
+                                <span class="dot" onclick="currentSlide(this, 2)"></span>
+                            </div>
+                        </div>
+                        <h4>Xbox 360</h4>
+                        <p><strong>Año:</strong> 2005-2013</p>
+                        <p>La serie continuó con éxito en Xbox 360, con títulos como RE4 y RE5 que marcaron el cambio hacia gameplay más orientado a la acción. La potencia gráfica permitió escenarios más detallados y enemigos más realistas.</p>
+                    </div>
+
+                    <div class="console-card">
+                        <div class="carousel-container">
+                            <div class="carousel">
+                                <img src="https://via.placeholder.com/400x250/8B0000/FFFFFF?text=RE+PS5+1" alt="Resident Evil PS5" class="carousel-image">
+                                <img src="https://via.placeholder.com/400x250/8B0000/FFFFFF?text=RE+PS5+2" alt="Resident Evil PS5" class="carousel-image">
+                                <img src="https://via.placeholder.com/400x250/8B0000/FFFFFF?text=RE+PS5+3" alt="Resident Evil PS5" class="carousel-image">
+                            </div>
+                            <button class="carousel-btn prev" onclick="changeSlide(this, -1)">❮</button>
+                            <button class="carousel-btn next" onclick="changeSlide(this, 1)">❯</button>
+                            <div class="carousel-dots">
+                                <span class="dot active" onclick="currentSlide(this, 0)"></span>
+                                <span class="dot" onclick="currentSlide(this, 1)"></span>
+                                <span class="dot" onclick="currentSlide(this, 2)"></span>
+                            </div>
+                        </div>
+                        <h4>PlayStation 5</h4>
+                        <p><strong>Año:</strong> 2021-Presente</p>
+                        <p>Con RE Village, la serie demuestra toda la capacidad gráfica y de procesamiento de la PS5, ofreciendo experiencias inmersivas con ray-tracing, tiempos de carga instantáneos y una calidad visual sin precedentes en la historia de la franquicia.</p>
+                    </div>
+                </div>
+
+                <div class="game-info">
+                    <h3>Información de la Saga</h3>
+                    <ul class="info-list">
+                        <li><strong>Creador:</strong> Capcom</li>
+                        <li><strong>Género:</strong> Survival Horror / Action Horror</li>
+                        <li><strong>Juegos principales:</strong> 9 títulos en línea principal + numerosos spin-offs</li>
+                        <li><strong>Protagonistas icónicos:</strong> Chris Redfield, Jill Valentine, Leon S. Kennedy, Claire Redfield</li>
+                        <li><strong>Característica distintiva:</strong> Combinación de acción estratégica, puzzle-solving y horror psicológico</li>
+                        <li><strong>Ventas globales:</strong> Más de 100 millones de copias en toda la franquicia</li>
+                        <li><strong>Adaptaciones:</strong> Películas, series de televisión, cómics y novelas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección The Legend of Zelda -->
+    <section id="zelda" class="saga-section alternate">
+        <div class="container">
+            <h2 class="section-title">The Legend of Zelda</h2>
+            
+            <div class="saga-content">
+                <div class="saga-intro">
+                    <h3>Introducción a la Saga</h3>
+                    <p>The Legend of Zelda es una de las franquicias más influyentes y aclamadas en la historia de los videojuegos. Creada por Nintendo, esta serie ha definido géneros enteros y establecido nuevos estándares en gameplay, narrativa y diseño artístico. Desde su primer lanzamiento en 1986, Zelda ha cautivado a generaciones de jugadores con su combinación única de aventura, exploración y desafíos creativos.</p>
+                </div>
+
+                <div class="consoles-grid">
+                    <div class="console-card">
+                        <div class="carousel-container">
+                            <div class="carousel">
+                                <img src="https://via.placeholder.com/400x250/FFD700/2D5016?text=Zelda+NES+1" alt="The Legend of Zelda NES" class="carousel-image">
+                                <img src="https://via.placeholder.com/400x250/FFD700/2D5016?text=Zelda+NES+2" alt="The Legend of Zelda NES" class="carousel-image">
+                                <img src="https://via.placeholder.com/400x250/FFD700/2D5016?text=Zelda+NES+3" alt="The Legend of Zelda NES" class="carousel-image">
+                            </div>
+                            <button class="carousel-btn prev" onclick="changeSlide(this, -1)">❮</button>
+                            <button class="carousel-btn next" onclick="changeSlide(this, 1)">❯</button>
+                            <div class="carousel-dots">
+                                <span class="dot active" onclick="currentSlide(this, 0)"></span>
+                                <span class="dot" onclick="currentSlide(this, 1)"></span>
+                                <span class="dot" onclick="currentSlide(this, 2)"></span>
+                            </div>
+                        </div>
+                        <h4>NES (Nintendo Entertainment System)</h4>
+                        <p><strong>Año:</strong> 1986</p>
+                        <p>El videojuego original de Zelda redefinió completamente los RPG y juegos de aventura. Su diseño abierto permitía a los jugadores explorar libremente, algo revolucionario en su época. La NES se revitalizó gracias a esta joya del gaming.</p>
+                    </div>
+
+                    <div class="console-card">
+                        <div class="carousel-container">
+                            <div class="carousel">
+                                <img src="https://via.placeholder.com/400x250/FFD700/2D5016?text=Zelda+SNES+1" alt="The Legend of Zelda SNES" class="carousel-image">
+                                <img src="https://via.placeholder.com/400x250/FFD700/2D5016?text=Zelda+SNES+2" alt="The Legend of Zelda SNES" class="carousel-image">
+                                <img src="https://via.placeholder.com/400x250/FFD700/2D5016?text=Zelda+SNES+3" alt="The Legend of Zelda SNES" class="carousel-image">
+                            </div>
+                            <button class="carousel-btn prev" onclick="changeSlide(this, -1)">❮</button>
+                            <button class="carousel-btn next" onclick="changeSlide(this, 1)">❯</button>
+                            <div class="carousel-dots">
+                                <span class="dot active" onclick="currentSlide(this, 0)"></span>
+                                <span class="dot" onclick="currentSlide(this, 1)"></span>
+                                <span class="dot" onclick="currentSlide(this, 2)"></span>
+                            </div>
+                        </div>
+                        <h4>Super Nintendo (SNES)</h4>
+                        <p><strong>Año:</strong> 1991</p>
+                        <p>"A Link to the Past" llevó la franquicia a nuevas alturas con gráficos mejorados y diseño de niveles brillante. Este título es considerado por muchos como uno de los mejores juegos de aventura jamás creados, influyendo en innumerables diseñadores.</p>
+                    </div>
+
+                    <div class="console-card">
+                        <div class="carousel-container">
+                            <div class="carousel">
+                                <img src="https://via.placeholder.com/400x250/FFD700/2D5016?text=Zelda+N64+1" alt="The Legend of Zelda N64" class="carousel-image">
+                                <img src="https://via.placeholder.com/400x250/FFD700/2D5016?text=Zelda+N64+2" alt="The Legend of Zelda N64" class="carousel-image">
+                                <img src="https://via.placeholder.com/400x250/FFD700/2D5016?text=Zelda+N64+3" alt="The Legend of Zelda N64" class="carousel-image">
+                            </div>
+                            <button class="carousel-btn prev" onclick="changeSlide(this, -1)">❮</button>
+                            <button class="carousel-btn next" onclick="changeSlide(this, 1)">❯</button>
+                            <div class="carousel-dots">
+                                <span class="dot active" onclick="currentSlide(this, 0)"></span>
+                                <span class="dot" onclick="currentSlide(this, 1)"></span>
+                                <span class="dot" onclick="currentSlide(this, 2)"></span>
+                            </div>
+                        </div>
+                        <h4>Nintendo 64</h4>
+                        <p><strong>Año:</strong> 1998</p>
+                        <p>"Ocarina of Time" revolucionó el gaming en 3D y pasó a la historia como un milestone en la industria. Su impacto en el diseño de juegos 3D fue monumental, inspirando a miles de desarrolladores en todo el mundo.</p>
+                    </div>
+
+                    <div class="console-card">
+                        <div class="carousel-container">
+                            <div class="carousel">
+                                <img src="https://via.placeholder.com/400x250/FFD700/2D5016?text=Zelda+Switch+1" alt="The Legend of Zelda Switch" class="carousel-image">
+                                <img src="https://via.placeholder.com/400x250/FFD700/2D5016?text=Zelda+Switch+2" alt="The Legend of Zelda Switch" class="carousel-image">
+                                <img src="https://via.placeholder.com/400x250/FFD700/2D5016?text=Zelda+Switch+3" alt="The Legend of Zelda Switch" class="carousel-image">
+                            </div>
+                            <button class="carousel-btn prev" onclick="changeSlide(this, -1)">❮</button>
+                            <button class="carousel-btn next" onclick="changeSlide(this, 1)">❯</button>
+                            <div class="carousel-dots">
+                                <span class="dot active" onclick="currentSlide(this, 0)"></span>
+                                <span class="dot" onclick="currentSlide(this, 1)"></span>
+                                <span class="dot" onclick="currentSlide(this, 2)"></span>
+                            </div>
+                        </div>
+                        <h4>Nintendo Switch</h4>
+                        <p><strong>Año:</strong> 2017</p>
+                        <p>"Breath of the Wild" redefinió completamente el concepto de juego de aventura abierto, ganando innumerables premios Game of the Year. "Tears of the Kingdom" continuó esta excelencia, consolidando la Switch como una generación dorada de Zelda.</p>
+                    </div>
+                </div>
+
+                <div class="game-info">
+                    <h3>Información de la Saga</h3>
+                    <ul class="info-list">
+                        <li><strong>Creador:</strong> Nintendo (Shigeru Miyamoto)</li>
+                        <li><strong>Género:</strong> Action-Adventure / RPG</li>
+                        <li><strong>Juegos principales:</strong> +20 títulos en la línea principal</li>
+                        <li><strong>Protagonista principal:</strong> Link (héroe silencioso a través de encarnaciones)</li>
+                        <li><strong>Elementos recurrentes:</strong> Triforce, Hyrule, Ganon, dungeons, puzzle-solving</li>
+                        <li><strong>Ventas globales:</strong> Más de 225 millones de copias vendidas</li>
+                        <li><strong>Premios destacados:</strong> Game of the Year en múltiples ocasiones (Breath of the Wild, Tears of the Kingdom)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto y Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Datos de Contacto -->
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul class="contact-info">
+                        <li><strong>Email:</strong> <a href="mailto:contacto@portfolio.com">contacto@portfolio.com</a></li>
+                        <li><strong>Teléfono:</strong> +34 123 456 789</li>
+                        <li><strong>Ubicación:</strong> España</li>
+                        <li><strong>Redes Sociales:</strong>
+                            <div class="social-links">
+                                <a href="#" target="_blank">LinkedIn</a>
+                                <a href="#" target="_blank">GitHub</a>
+                                <a href="#" target="_blank">Twitter</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Información Adicional -->
+                <div class="footer-section">
+                    <h3>Sobre Este Proyecto</h3>
+                    <p>Este portfolio web ha sido desarrollado como una demostración de habilidades en:</p>
+                    <ul class="skills-list">
+                        <li>HTML5 semántico</li>
+                        <li>CSS3 responsivo</li>
+                        <li>JavaScript vanilla</li>
+                        <li>Diseño UX/UI</li>
+                        <li>Accesibilidad web</li>
+                        <li>Optimización de rendimiento</li>
+                    </ul>
+                </div>
+
+                <!-- Apartado Legal -->
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="legal-links">
+                        <li><a href="#" class="legal-link">Política de Privacidad</a></li>
+                        <li><a href="#" class="legal-link">Términos y Condiciones</a></li>
+                        <li><a href="#" class="legal-link">Aviso Legal</a></li>
+                        <li><a href="#" class="legal-link">Cookies</a></li>
+                    </ul>
+                    <p class="copyright">© 2026 Portfolio Web. Todos los derechos reservados.</p>
+                    <p class="disclaimer">Resident Evil y The Legend of Zelda son marcas registradas de sus respectivos propietarios. Este sitio es de carácter educativo.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
