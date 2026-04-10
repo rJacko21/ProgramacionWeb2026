@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #eef2f7 0%, #d9e2ec 100%);
+    color: #1f2937;
+}
+
+.dashboard-container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px 25px 40px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.dashboard-header h1 {
+    font-size: 2rem;
+    letter-spacing: -0.03em;
+    color: #111827;
+}
+
+.dashboard-header p {
+    margin-top: 8px;
+    color: #4b5563;
+    max-width: 600px;
+}
+
+.btn {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.btn-print {
+    background: #2563eb;
+    color: white;
+    box-shadow: 0 12px 24px rgba(37, 99, 235, 0.18);
+}
+
+.btn-print:hover {
+    transform: translateY(-2px);
+    background: #1d4ed8;
+}
+
+.stats-panel {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin: 30px 0;
+}
+
+.stat-card {
+    background: #f8fafc;
+    padding: 24px;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+    box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.03);
+}
+
+.stat-card h2 {
+    font-size: 1.05rem;
+    color: #2563eb;
+    margin-bottom: 16px;
+}
+
+.stat-card p {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.content-panel {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 24px;
+}
+
+.alumnos-card,
+.grafico-card {
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.alumnos-card h2,
+.grafico-card h2 {
+    font-size: 1.15rem;
+    color: #111827;
+    margin-bottom: 18px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+thead th {
+    text-align: left;
+    padding: 14px 12px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-weight: 700;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tbody td {
+    padding: 14px 12px;
+    color: #334155;
+}
+
+.barra-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+    height: 300px;
+    padding: 20px 10px 10px;
+    border-left: 2px solid #cbd5e1;
+    border-bottom: 2px solid #cbd5e1;
+    background: #f8fafc;
+    border-radius: 16px;
+}
+
+.barra-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    max-width: 70px;
+}
+
+.barra {
+    width: 100%;
+    background: linear-gradient(180deg, #38bdf8 0%, #0ea5e9 100%);
+    border-radius: 14px 14px 0 0;
+    transition: height 0.5s ease;
+    position: relative;
+}
+
+.barra::after {
+    content: attr(data-value);
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.barra-label {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #475569;
+}
+
+.grafico-card .grafico-title {
+    font-size: 0.95rem;
+    color: #475569;
+    margin-bottom: 14px;
+}
+
+.detalle-panel {
+    margin-top: 28px;
+}
+
+.detalle-info {
+    background: #edf2ff;
+    border-radius: 18px;
+    padding: 24px;
+    border: 1px solid #c7d2fe;
+}
+
+.detalle-info h2 {
+    margin-bottom: 14px;
+    color: #1e3a8a;
+}
+
+.detalle-info p {
+    color: #334155;
+    line-height: 1.7;
+}
+
+code {
+    display: inline-block;
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+@media (max-width: 980px) {
+    .content-panel {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 680px) {
+    .dashboard-container {
+        margin: 16px;
+        padding: 18px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stats-panel {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .dashboard-container, .dashboard-container * {
+        visibility: visible;
+    }
+
+    .dashboard-container {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    button {
+        display: none;
+    }
+
+    @page {
+        margin: 12mm;
+    }
+}

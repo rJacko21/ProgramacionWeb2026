@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Alumnos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div>
+                <h1>Panel de Análisis de Alumnos</h1>
+                <p>Visualiza el rendimiento académico con estadísticas claras y un gráfico dinámico.</p>
+            </div>
+            <button class="btn btn-print" onclick="imprimirDashboard()">Exportar PDF</button>
+        </header>
+
+        <section class="stats-panel">
+            <article class="stat-card">
+                <h2>Promedio General</h2>
+                <p id="promedio">0.00</p>
+            </article>
+            <article class="stat-card">
+                <h2>Mejor Alumno</h2>
+                <p id="mejorAlumno">-</p>
+            </article>
+            <article class="stat-card">
+                <h2>Peor Alumno</h2>
+                <p id="peorAlumno">-</p>
+            </article>
+        </section>
+
+        <section class="content-panel">
+            <div class="alumnos-card">
+                <h2>Lista de Alumnos</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Nota</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaAlumnos"></tbody>
+                </table>
+            </div>
+
+            <div class="grafico-card">
+                <h2>Distribución de Notas</h2>
+                <div class="grafico" id="graficoNotas"></div>
+            </div>
+        </section>
+
+        <section class="detalle-panel">
+            <div class="detalle-info">
+                <h2>Detalles del Análisis</h2>
+                <p>Los datos se calculan automáticamente desde el arreglo JSON de alumnos. El promedio se obtiene con <code>reduce</code> y el mejor/peor alumno se selecciona con lógica profesional.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
